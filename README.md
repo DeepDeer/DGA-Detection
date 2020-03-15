@@ -43,12 +43,10 @@ System Framework
 ![Overview of the system](https://github.com/DeepDeer/DGA-Detection/blob/master/structure.jpeg)
 As shown in this figure, there are five main modules in this system:
 * Parsing module: parase pcap files and extract features with tshark.
-* Detect module: 1)filter out error packets and packets with irregular domain names;
+* Detect module: 1)filter out error packets and packets with irregular domain names; 2)Detect DGA domain with our trained model.
 * Store module: built with click house.
-2)Detect DGA domain with our trained model.
 * Present module: built with grafana;
 * Data enrichment: public DGA list (from DGArchive and 360 NetLab).
-Parsing module
 
 Get Started
 -----------
