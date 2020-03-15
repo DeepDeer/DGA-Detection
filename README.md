@@ -8,12 +8,17 @@ It's developed with Python and has two major functions:
 (such as query type、opcode、Top top 5 queried e2ld, etc), you can easily minor
 the DNS traffic on network level and user level.
 
-Network level fields (counting as pps)
+Network level fields (counting as pps)|  
 --------- | -------------
 request and response | top 5 queried e2ld 
 query type  | top 5 queried fqdn
 opcode | domain length
 packet size | unique e2ld
+
+User level fields |
+--------- |
+top K query user| 
+top K query e2ld user|
 
 <div align=center><img src="https://github.com/DeepDeer/DGA-Detection/blob/master/plots.png" width="600" height="350"/></div>
 
