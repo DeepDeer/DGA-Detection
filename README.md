@@ -7,8 +7,15 @@ It's developed with Python and has two major functions:
 * DNS traffic visualization. With nine time series plots of the key fields 
 (such as query type、opcode、Top top 5 queried e2ld, etc), you can easily minor
 the DNS traffic on network level and user level.
-![Main fields](https://github.com/DeepDeer/DGA-Detection/blob/master/structure.jpeg)
-![Time series plots](https://github.com/DeepDeer/DGA-Detection/blob/master/structure.jpeg)
+
+Network level fields | counting as pps
+--------- | -------------
+request and response | top 5 queried e2ld 
+query type  | top 5 queried fqdn
+opcode | domain length
+packet size | unique e2ld
+
+![Time series plot examples](https://github.com/DeepDeer/DGA-Detection/blob/master/plots.png)
 * DGA detection. We employ machine learning methods like CNN, LSTM, and Word2vec 
 (Not integrated currently) to detect DGA-generated domains based on their 
 character-level distributions or inter-domain relations. For more design details, 
@@ -19,6 +26,8 @@ please refer to the following papers.
 
 System Framework
 ---------------------------------------
+
+
 ![Overview of the system](https://github.com/DeepDeer/DGA-Detection/blob/master/structure.jpeg)
 As shown in this figure, there are five main modules in this system:
 * Parsing module: parase pcap files and extract features with tshark.
