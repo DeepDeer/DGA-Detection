@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  clickhouse:
+    image: yearningtony/clickhouse
+    expose:
+      - "8123"
+    volumes:
+      - ./clickhouse_volume:/var/lib/clickhouse
+
+  grafana:
+    image: yearningtony/grafana
+    ports:
+      - "3000:3000"
+    links:
+      - clickhouse
+
+  dnsmonitor:
+    image: yearningtony/dnsmonitor:latest
+    working_dir: /dnsystem
+    volumes:
+      - ./data:/dnsystem/data
+      - ./lib:/dnsystem/lib
+    links:
+      - clickhouse
+        #    command: python write_clickhouse.py
+
