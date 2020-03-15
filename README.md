@@ -1,5 +1,5 @@
 # DGA-Detection
-Detect DGA-generation domains with DeepLearning methods.
+Detect DGA-generation domains with DeepLearning methods.\\
 This system has two major functions: 
   1) DNS traffic visualization；
   2）Malicious Domain detection.
