@@ -15,7 +15,7 @@ query type  | top 5 queried fqdn
 opcode | domain length
 packet size | unique e2ld
 
-<img src="https://github.com/DeepDeer/DGA-Detection/blob/master/plots.png" alt="oauth" style="zoom:20%;" />
+<img src="https://github.com/DeepDeer/DGA-Detection/blob/master/plots.png" width="300" height="450" />
 
 * DGA detection. We employ machine learning methods like CNN, LSTM, and Word2vec 
 (Not integrated currently) to detect DGA-generated domains based on their 
